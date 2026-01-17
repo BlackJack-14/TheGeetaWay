@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+
+# Environment
+.env
+*.env
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# Gradio
+.gradio/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
