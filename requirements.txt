@@ -1,0 +1,25 @@
+# TheGeetaWay Dependencies
+
+# Web Framework
+streamlit>=1.28.0
+fastapi>=0.104.0
+uvicorn>=0.24.0
+
+# HTTP
+requests>=2.31.0
+
+# Environment
+python-dotenv>=1.0.0
+
+# Vector Search
+faiss-cpu>=1.7.4
+numpy>=1.24.0
+
+# LLM
+groq>=0.4.0
+
+# Embeddings
+sentence-transformers>=2.2.0
+
+# Gradio (optional alternative UI)
+gradio>=4.0.0
