@@ -9,8 +9,18 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-API_BASE_URL = os.getenv("API_BASE_URL", "http://localhost:8000")
-API_KEY = os.getenv("API_KEY", "")
+# Support both os.getenv (local) and st.secrets (Streamlit Cloud)
+def get_secret(key, default=""):
+    # Try st.secrets first (Streamlit Cloud)
+    try:
+        return st.secrets.get(key, default)
+    except:
+        pass
+    # Fallback to environment variable
+    return os.getenv(key, default)
+
+API_BASE_URL = get_secret("API_BASE_URL", "http://localhost:8000")
+API_KEY = get_secret("API_KEY", "")
 
 if not API_KEY:
     st.error("API_KEY not found in environment variables.")
