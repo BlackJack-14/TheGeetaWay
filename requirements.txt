@@ -4,11 +4,12 @@ uvicorn[standard]
 python-dotenv
 pydantic
 
-# AI/ML
+# AI/ML (CPU-only for Railway)
 groq
-sentence-transformers
 faiss-cpu
 numpy
 
-# Frontend (optional)
-streamlit
+# Sentence Transformers with CPU-only torch
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch --index-url https://download.pytorch.org/whl/cpu
+sentence-transformers
