@@ -25,6 +25,9 @@ env/
 # Jupyter
 .ipynb_checkpoints/
 
+# Streamlit secrets (local only)
+.streamlit/secrets.toml
+
 # OS
 .DS_Store
 Thumbs.db
